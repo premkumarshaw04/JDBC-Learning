@@ -7,19 +7,19 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
         //Database URL
-        String url = "jdbc:mysql://localhost:3306/studentsyt";
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
 
         //database credential
         String username = "root";
         String password = "prem@1234";
 
         //Establish the connection
-        try(Connection connection = DriverManager.getConnection(url, username, password)){
+        try (Connection connection = DriverManager.getConnection(url, username, password)) {
             System.out.println("Connected to the DataBase");
             System.out.println(connection);
 
             //Perform the database operation here
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.out.println("Connection Failed: " + e.getMessage());
         }
     }

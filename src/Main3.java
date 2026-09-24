@@ -1,24 +1,24 @@
-//Insert Data into database...
-
-//Retrieving the data: executeQuery
-//inserting , updating, deleting the data: executeUpdate
+//Delete Data into database...
+//But this is not a good practise.
 
 import java.sql.*;
-public class Main2 {
+public class Main3 {
     public static void main(String[] args) throws ClassNotFoundException{
 
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
         String password = "prem@1234";
-        String query = "INSERT into employee(id, name, job_title, salary) VALUES(3, 'Harshit', 'Full Stack Web Developer', 87000.0);";
+        String query = "DELETE FROM employee where id = 3;";
 
+        //Loading the drivers
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");//Loading the drivers
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Drivers Loaded Successfully");
         }catch(ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
 
+        //Creating the Connection
         try{
             Connection con = DriverManager.getConnection(url, username, password);
             System.out.println("Connection Established Successfully..");
@@ -26,9 +26,9 @@ public class Main2 {
             int rowsAffected = stmt.executeUpdate(query);
 
             if(rowsAffected > 0){
-                System.out.println("Insert Successful. " + rowsAffected + " rows affected.");
+                System.out.println("Deletion Successful. " + rowsAffected + " rows affected.");
             }
-            else System.out.println("Insertion Failed...");
+            else System.out.println("Deletion Failed...");
 
             //Closing the Costly Resources....
             stmt.close();

@@ -24,6 +24,7 @@ public class Main3 {
             System.out.println("Connection Established Successfully..");
             Statement stmt = con.createStatement();
             int rowsAffected = stmt.executeUpdate(query);
+            //executeUpdate method will be used in case of: insert, update, delete
 
             if(rowsAffected > 0){
                 System.out.println("Deletion Successful. " + rowsAffected + " rows affected.");

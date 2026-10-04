@@ -7,7 +7,7 @@ public class Main3 {
 
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
-        String password = "prem@1234";
+        String password = "your_password";
         String query = "DELETE FROM employee where id = 3;";
 
         //Loading the drivers

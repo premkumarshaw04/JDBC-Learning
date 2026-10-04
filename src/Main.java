@@ -11,7 +11,7 @@ public class Main {
 
         //database credential
         String username = "root";
-        String password = "prem@1234";
+        String password = "your_password";
 
         //Establish the connection
         try (Connection connection = DriverManager.getConnection(url, username, password)) {

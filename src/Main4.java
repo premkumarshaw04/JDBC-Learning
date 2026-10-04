@@ -6,7 +6,7 @@ public class Main4 {
 
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String username = "root";
-        String password = "prem@1234";
+        String password = "your_password";
         String query = "UPDATE employee SET job_title = 'Full Stack Developer', salary = '70000' WHERE id = 2;";
 
         //Loading the drivers
